@@ -21,6 +21,7 @@ st.markdown("""
 <style>
     .stApp {
         background-color: #f5f5f5;
+        color: #333333;
     }
     .header {
         background: linear-gradient(135deg, #009c3b 0%, #0055a4 100%);
@@ -45,6 +46,7 @@ st.markdown("""
         border-radius: 10px;
         box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         margin-bottom: 2rem;
+        color: #333333;
     }
     .section-title {
         color: #0055a4;
@@ -57,6 +59,7 @@ st.markdown("""
         border-radius: 10px;
         padding: 0.5rem;
         margin-bottom: 2rem;
+        color: #333333;
     }
     .stButton>button {
         background-color: #009c3b;
@@ -76,6 +79,7 @@ st.markdown("""
         box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         max-height: 80vh;
         overflow-y: auto;
+        color: #333333;
     }
     .preview-title {
         color: #0055a4;
@@ -84,6 +88,39 @@ st.markdown("""
         margin-bottom: 1rem;
         padding-bottom: 0.5rem;
         border-bottom: 2px solid #ffbd00;
+    }
+    /* Fix for markdown content visibility */
+    .stMarkdown {
+        color: #333333;
+    }
+    .stMarkdown strong {
+        color: #333333;
+    }
+    /* Ensure all text is readable */
+    p, label, div, span {
+        color: #333333;
+    }
+    /* Input fields */
+    input[type="text"], textarea {
+        color: #333333;
+    }
+    /* Sidebar content - white text on dark background */
+    [data-testid="stSidebar"] {
+        color: white !important;
+    }
+    [data-testid="stSidebar"] p,
+    [data-testid="stSidebar"] div,
+    [data-testid="stSidebar"] span,
+    [data-testid="stSidebar"] label,
+    [data-testid="stSidebar"] h1,
+    [data-testid="stSidebar"] h2,
+    [data-testid="stSidebar"] h3 {
+        color: white !important;
+    }
+    /* Sidebar markdown content */
+    [data-testid="stSidebar"] .stMarkdown,
+    [data-testid="stSidebar"] .stMarkdown strong {
+        color: white !important;
     }
 </style>
 """, unsafe_allow_html=True)
